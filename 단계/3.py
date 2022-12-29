@@ -1,0 +1,8 @@
+c = input().split(' ')
+A = int(c[0])
+B = int(c[1])
+print(A+B)
+print(A-B)
+print(A*B)
+print(int(round(A/B,0)))
+print(A % B)
