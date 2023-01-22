@@ -1,24 +1,14 @@
-n = input()
-m = int(n)
-i = 0
+# 3052
 
-if 0 < int(n) < 10:
-    n = "0" + n
-elif int(n)==0:
-    print("1")
+n = [input() in range(10)]
+n=[]
+m=[]
 
-while True:
-    if int(n)==0:
-        break
-    a = int(n[0])+int(n[1])
-    b = str(a)
-    if a>9:
-        n= n[1]+b[1]
-    else :
-        n=n[1]+b
-    i= i+1
-    if int(n) == m :
-        break
+for i in range(10):
+    # int(input())
+    k = int(n[i]) % 10
+    if k not in m:
+        m.append(k)
 
-if int(n) != 0:
-    print(i)
+# print(m)
+print(len(m))
