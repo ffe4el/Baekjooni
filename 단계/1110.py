@@ -1,13 +1,19 @@
-# 10989 수 정렬3 이건 1억까지... 시간초과가 문제일것 같은데..
-
+# 11047 동전
 import sys
 
 input = sys.stdin.readline
+n, k = map(int, input().split())
+a=[]
+cnt = 0
 
-a = []
-for _ in range(int(input())):
+for _ in range(n):
     a.append(int(input()))
 
-a.sort()
-for s in a:
-    print(s)
+for i in range(n-1,-1,-1):
+    if a[i] <= k:
+        while(k >= a[i]):
+            k = k - a[i]
+            # print(a[i])
+            cnt += 1
+
+print(cnt)
