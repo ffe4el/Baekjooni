@@ -57,7 +57,7 @@ int main(){
         cin >> arr[i];
     }
     
-    int r_min = 10000;
+    int r_min = 10000; //min값 초기화
     for(int i=0; i+8<=m; i++){
         for(int j=0; j+8<=n; j++){
             int tmp;
